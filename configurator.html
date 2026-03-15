@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Конфигуратор ПК</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<div class="logo">⚙ PC Builder</div>
+
+<nav>
+<a href="index.html">Главная</a>
+<a href="components.html">Компоненты</a>
+<a href="configurator.html">Конфигуратор</a>
+<a href="guides.html">Гайды</a>
+<a href="contacts.html">Контакты</a>
+</nav>
+</header>
+
+<h1 class="title">Собери ПК</h1>
+
+<div class="builder">
+
+<select id="cpu">
+<option>Выбери CPU</option>
+<option>Intel i5</option>
+<option>Intel i7</option>
+<option>Ryzen 5</option>
+<option>Ryzen 7</option>
+</select>
+
+<select id="gpu">
+<option>Выбери GPU</option>
+<option>RTX 4060</option>
+<option>RTX 4070</option>
+<option>RX 7700</option>
+</select>
+
+<select id="ram">
+<option>Выбери RAM</option>
+<option>16GB</option>
+<option>32GB</option>
+<option>64GB</option>
+</select>
+
+<button onclick="showBuild()">Показать сборку</button>
+
+</div>
+
+<p id="result"></p>
+
+<script src="script.js"></script>
+
+</body>
+</html>
