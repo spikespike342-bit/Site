@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Компоненты ПК</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+background:#f5f7fa;
+font-family:Arial;
+color:#222;
+margin:0;
+}
+
+.container{
+padding:40px;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav a{
+margin-left:20px;
+text-decoration:none;
+color:#222;
+font-weight:600;
+}
+
+.tabs{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin:20px 0;
+}
+
+.tabs button{
+padding:8px 15px;
+border-radius:8px;
+border:1px solid #ccc;
+background:white;
+cursor:pointer;
+}
+
+.tabs button.active{
+background:#1e90a8;
+color:white;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.product{
+background:white;
+border-radius:12px;
+box-shadow:0 6px 20px rgba(0,0,0,0.1);
+overflow:hidden;
+padding:15px;
+}
+
+.product img{
+width:100%;
+height:180px;
+object-fit:contain;
+background:#f3f3f3;
+border-radius:6px;
+}
+
+.product h3{
+color:#111;
+}
+
+.product p{
+color:#555;
+}
+
+.price{
+font-size:20px;
+color:#1e90a8;
+margin:10px 0;
+}
+
+.product button{
+background:#1e90a8;
+color:white;
+border:none;
+padding:10px;
+width:100%;
+border-radius:6px;
+cursor:pointer;
+}
+
+.search{
+width:100%;
+padding:12px;
+border-radius:6px;
+border:1px solid #ccc;
+margin-bottom:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">⚙ PC Builder</div>
+
+<nav>
+<a href="index.html">Главная</a>
+<a href="components.html">Компоненты</a>
+<a href="guides.html">Гайды</a>
+<a href="contacts.html">Контакты</a>
+</nav>
+
+</header>
+
+<div class="container">
+
+<input class="search" placeholder="Поиск компонентов...">
+
+<div class="tabs">
+
+<button onclick="filterProducts('all')" class="active">Все компоненты</button> <button onclick="filterProducts('cpu')">Процессоры</button> <button onclick="filterProducts('gpu')">Видеокарты</button> <button onclick="filterProducts('ram')">Оперативная память</button> <button onclick="filterProducts('storage')">Накопители</button> <button onclick="filterProducts('psu')">Блок питания</button> <button onclick="filterProducts('case')">Корпус</button> <button onclick="filterProducts('cooling')">Охлаждение</button>
+
+</div>
+
+<div class="grid">
+
+<!-- CPU -->
+
+<div class="product cpu">
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/AMD_Ryzen_7_3700X.jpg">
+<h3>AMD Ryzen 9 7950X</h3>
+<p>16 ядер • 32 потока</p>
+<div class="price">54 990 ₽</div>
+<button onclick="addComponent('AMD Ryzen 9 7950X', 54990)">Добавить</button>
+</div>
+
+<div class="product cpu">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Intel_Core_i9_9900K.jpg">
+<h3>Intel Core i9 14900K</h3>
+<p>24 ядра • 32 потока</p>
+<div class="price">59 990 ₽</div>
+<button onclick="addComponent('Intel Core i9 14900K', 59990)">Добавить</button>
+</div>
+
+<!-- GPU -->
+
+<div class="product gpu">
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Nvidia_GeForce_RTX_4090.jpg">
+<h3>NVIDIA RTX 4070</h3>
+<p>12GB GDDR6X</p>
+<div class="price">69 990 ₽</div>
+<button onclick="addComponent('NVIDIA RTX 4070', 69990)">Добавить</button>
+</div>
+
+<div class="product gpu">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Nvidia_GTX_1080.jpg">
+<h3>NVIDIA RTX 4060</h3>
+<p>8GB GDDR6</p>
+<div class="price">49 990 ₽</div>
+<button onclick="addComponent('NVIDIA RTX 4060', 49990)">Добавить</button>
+</div>
+
+<!-- RAM -->
+
+<div class="product ram">
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/DDR4_RAM.jpg">
+<h3>DDR5 32GB</h3>
+<p>6000MHz</p>
+<div class="price">14 990 ₽</div>
+<button onclick="addComponent('DDR5 32GB 6000MHz', 14990)">Добавить</button>
+</div>
+
+<div class="product ram">
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/DDR4_RAM.jpg">
+<h3>DDR5 16GB</h3>
+<p>5600MHz</p>
+<div class="price">9 990 ₽</div>
+<button onclick="addComponent('DDR5 16GB 5600MHz', 9990)">Добавить</button>
+</div>
+
+<!-- STORAGE -->
+
+<div class="product storage">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Samsung_970_EVO_NVMe_M.2_SSD.jpg">
+<h3>Samsung 980 PRO</h3>
+<p>1TB NVMe SSD</p>
+<div class="price">12 990 ₽</div>
+<button onclick="addComponent('Samsung 980 PRO 1TB NVMe SSD', 12990)">Добавить</button>
+</div>
+
+<div class="product storage">
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Samsung_SSD_860_EVO.jpg">
+<h3>Samsung 870 EVO</h3>
+<p>1TB SATA SSD</p>
+<div class="price">9 990 ₽</div>
+<button onclick="addComponent('Samsung 870 EVO 1TB SATA SSD', 9990)">Добавить</button>
+</div>
+
+<!-- PSU -->
+
+<div class="product psu">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/59/ATX_power_supply.jpg">
+<h3>Corsair RM850x</h3>
+<p>850W Gold</p>
+<div class="price">13 990 ₽</div>
+<button onclick="addComponent('Corsair RM850x 850W', 13990)">Добавить</button>
+</div>
+
+<div class="product psu">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/59/ATX_power_supply.jpg">
+<h3>Seasonic Focus 750W</h3>
+<p>750W Gold</p>
+<div class="price">11 990 ₽</div>
+<button onclick="addComponent('Seasonic Focus 750W', 11990)">Добавить</button>
+</div>
+
+<!-- CASE -->
+
+<div class="product case">
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Computer_case.jpg">
+<h3>NZXT H510</h3>
+<p>Mid Tower</p>
+<div class="price">12 990 ₽</div>
+<button onclick="addComponent('NZXT H510 Mid Tower Case', 12990)">Добавить</button>
+</div>
+
+<!-- COOLING -->
+
+<div class="product cooling">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Computer_fan.jpg">
+<h3>Noctua NH-D15</h3>
+<p>Air Cooler</p>
+<div class="price">9 990 ₽</div>
+<button onclick="addComponent('Noctua NH-D15 Air Cooler', 9990)">Добавить</button>
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function filterProducts(category){
+
+let products=document.querySelectorAll(".product")
+let buttons=document.querySelectorAll(".tabs button")
+
+buttons.forEach(btn=>btn.classList.remove("active"))
+event.target.classList.add("active")
+
+products.forEach(product=>{
+
+if(category==="all"){
+product.style.display="block"
+}
+
+else if(product.classList.contains(category)){
+product.style.display="block"
+}
+
+else{
+product.style.display="none"
+}
+
+})
+
+}
+
+</script>
+<div id="popup" class="popup">
+
+<div class="popup-box">
+
+<h2>Компонент добавлен</h2>
+
+<p>Деталь успешно добавлена в сборку ПК.</p>
+
+<button onclick="closePopup()">Закрыть</button>
+
+</div>
+
+</div>
+<div id="cartPopup" class="popup">
+  <div class="popup-box">
+    <h2>Сборка ПК</h2>
+
+```
+<div id="cartItems">
+  <!-- сюда будут добавляться компоненты -->
+</div>
+
+<h3>Общая цена: <span id="totalPrice">0</span> ₽</h3>
+
+<button onclick="closeCart()">Закрыть</button>
+```
+
+  </div>
+</div>
+
+</body>
+</html>
