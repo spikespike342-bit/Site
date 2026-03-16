@@ -53,6 +53,40 @@ background:#1e90a8;
 color:white;
 }
 
+<div class="tabs">
+  <button onclick="filterProducts('all')" class="active">Все компоненты</button>
+  <button onclick="filterProducts('cpu')">Процессоры</button>
+  <button onclick="filterProducts('gpu')">Видеокарты</button>
+  <button onclick="filterProducts('ram')">Оперативная память</button>
+  <button onclick="filterProducts('storage')">Накопители</button>
+  <button onclick="filterProducts('psu')">Блок питания</button>
+  <button onclick="filterProducts('case')">Корпус</button>
+  <button onclick="filterProducts('cooling')">Охлаждение</button>
+  <button onclick="filterProducts('motherboard')">Материнская плата</button> <!-- новая вкладка -->
+</div>
+
+<!-- Сетка товаров -->
+<div class="grid">
+
+  <!-- Пример материнской платы -->
+  <div class="product motherboard">
+    <img src="https://shop.kz/upload/iblock/abc/asus-rog-strix-z790-e-gaming.jpg" alt="ASUS ROG Strix Z790-E Gaming">
+    <h3>ASUS ROG Strix Z790-E Gaming</h3>
+    <p>Socket LGA1700 • ATX</p>
+    <div class="price">39 990 ₽</div>
+    <button>Добавить</button>
+  </div>
+
+  <div class="product motherboard">
+    <img src="https://shop.kz/upload/iblock/def/msi-meg-z790-unify.jpg" alt="MSI MEG Z790 Unify">
+    <h3>MSI MEG Z790 Unify</h3>
+    <p>Socket LGA1700 • ATX</p>
+    <div class="price">37 990 ₽</div>
+    <button>Добавить</button>
+  </div>
+
+</div>
+  
 .grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
