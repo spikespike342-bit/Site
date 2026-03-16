@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
 <title>Компоненты ПК</title>
-<link rel="stylesheet" href="style.css">
 
 <style>
 
@@ -77,14 +75,6 @@ background:#f3f3f3;
 border-radius:6px;
 }
 
-.product h3{
-color:#111;
-}
-
-.product p{
-color:#555;
-}
-
 .price{
 font-size:20px;
 color:#1e90a8;
@@ -133,9 +123,14 @@ margin-bottom:20px;
 <input class="search" placeholder="Поиск компонентов...">
 
 <div class="tabs">
-
-<button onclick="filterProducts('all')" class="active">Все компоненты</button> <button onclick="filterProducts('cpu')">Процессоры</button> <button onclick="filterProducts('gpu')">Видеокарты</button> <button onclick="filterProducts('ram')">Оперативная память</button> <button onclick="filterProducts('storage')">Накопители</button> <button onclick="filterProducts('psu')">Блок питания</button> <button onclick="filterProducts('case')">Корпус</button> <button onclick="filterProducts('cooling')">Охлаждение</button>
-
+<button onclick="filterProducts('all')" class="active">Все компоненты</button>
+<button onclick="filterProducts('cpu')">Процессоры</button>
+<button onclick="filterProducts('gpu')">Видеокарты</button>
+<button onclick="filterProducts('ram')">Оперативная память</button>
+<button onclick="filterProducts('storage')">Накопители</button>
+<button onclick="filterProducts('psu')">Блок питания</button>
+<button onclick="filterProducts('case')">Корпус</button>
+<button onclick="filterProducts('cooling')">Охлаждение</button>
 </div>
 
 <div class="grid">
@@ -143,111 +138,111 @@ margin-bottom:20px;
 <!-- CPU -->
 
 <div class="product cpu">
-<img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/AMD_Ryzen_7_3700X.jpg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/AMD_Ryzen_9_7950X.jpg" alt="AMD Ryzen 9 7950X">
 <h3>AMD Ryzen 9 7950X</h3>
 <p>16 ядер • 32 потока</p>
 <div class="price">54 990 ₽</div>
-<button onclick="addComponent('AMD Ryzen 9 7950X', 54990)">Добавить</button>
+<button>Добавить</button>
 </div>
 
 <div class="product cpu">
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Intel_Core_i9_9900K.jpg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/59/Intel_Core_i9_13900K.jpg" alt="Intel Core i9 14900K">
 <h3>Intel Core i9 14900K</h3>
 <p>24 ядра • 32 потока</p>
 <div class="price">59 990 ₽</div>
-<button onclick="addComponent('Intel Core i9 14900K', 59990)">Добавить</button>
+<button>Добавить</button>
 </div>
 
 <!-- GPU -->
 
 <div class="product gpu">
-<img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Nvidia_GeForce_RTX_4090.jpg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Nvidia_GeForce_RTX_4070_Founders_Edition.jpg" alt="RTX 4070">
 <h3>NVIDIA RTX 4070</h3>
 <p>12GB GDDR6X</p>
 <div class="price">69 990 ₽</div>
-<button onclick="addComponent('NVIDIA RTX 4070', 69990)">Добавить</button>
+<button>Добавить</button>
 </div>
 
 <div class="product gpu">
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Nvidia_GTX_1080.jpg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Nvidia_GeForce_RTX_4060.jpg" alt="RTX 4060">
 <h3>NVIDIA RTX 4060</h3>
 <p>8GB GDDR6</p>
 <div class="price">49 990 ₽</div>
-<button onclick="addComponent('NVIDIA RTX 4060', 49990)">Добавить</button>
+<button>Добавить</button>
 </div>
 
 <!-- RAM -->
 
 <div class="product ram">
-<img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/DDR4_RAM.jpg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/04/DDR5_RAM_Module.jpg" alt="DDR5 RAM">
 <h3>DDR5 32GB</h3>
 <p>6000MHz</p>
 <div class="price">14 990 ₽</div>
-<button onclick="addComponent('DDR5 32GB 6000MHz', 14990)">Добавить</button>
+<button>Добавить</button>
 </div>
 
 <div class="product ram">
-<img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/DDR4_RAM.jpg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/04/DDR5_RAM_Module.jpg" alt="DDR5 RAM">
 <h3>DDR5 16GB</h3>
 <p>5600MHz</p>
 <div class="price">9 990 ₽</div>
-<button onclick="addComponent('DDR5 16GB 5600MHz', 9990)">Добавить</button>
+<button>Добавить</button>
 </div>
 
 <!-- STORAGE -->
 
 <div class="product storage">
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Samsung_970_EVO_NVMe_M.2_SSD.jpg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Samsung_980_PRO_M2_SSD.jpg" alt="Samsung 980 PRO">
 <h3>Samsung 980 PRO</h3>
 <p>1TB NVMe SSD</p>
 <div class="price">12 990 ₽</div>
-<button onclick="addComponent('Samsung 980 PRO 1TB NVMe SSD', 12990)">Добавить</button>
+<button>Добавить</button>
 </div>
 
 <div class="product storage">
-<img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Samsung_SSD_860_EVO.jpg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Samsung_870_EVO_SSD.jpg" alt="Samsung 870 EVO">
 <h3>Samsung 870 EVO</h3>
 <p>1TB SATA SSD</p>
 <div class="price">9 990 ₽</div>
-<button onclick="addComponent('Samsung 870 EVO 1TB SATA SSD', 9990)">Добавить</button>
+<button>Добавить</button>
 </div>
 
 <!-- PSU -->
 
 <div class="product psu">
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/59/ATX_power_supply.jpg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/59/ATX_power_supply.jpg" alt="Power Supply">
 <h3>Corsair RM850x</h3>
 <p>850W Gold</p>
 <div class="price">13 990 ₽</div>
-<button onclick="addComponent('Corsair RM850x 850W', 13990)">Добавить</button>
+<button>Добавить</button>
 </div>
 
 <div class="product psu">
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/59/ATX_power_supply.jpg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/59/ATX_power_supply.jpg" alt="Power Supply">
 <h3>Seasonic Focus 750W</h3>
 <p>750W Gold</p>
 <div class="price">11 990 ₽</div>
-<button onclick="addComponent('Seasonic Focus 750W', 11990)">Добавить</button>
+<button>Добавить</button>
 </div>
 
 <!-- CASE -->
 
 <div class="product case">
-<img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Computer_case.jpg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Computer_case.jpg" alt="NZXT H510">
 <h3>NZXT H510</h3>
 <p>Mid Tower</p>
 <div class="price">12 990 ₽</div>
-<button onclick="addComponent('NZXT H510 Mid Tower Case', 12990)">Добавить</button>
+<button>Добавить</button>
 </div>
 
 <!-- COOLING -->
 
 <div class="product cooling">
-<img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Computer_fan.jpg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Noctua_NH-D15_CPU_cooler.jpg" alt="Noctua NH-D15">
 <h3>Noctua NH-D15</h3>
 <p>Air Cooler</p>
 <div class="price">9 990 ₽</div>
-<button onclick="addComponent('Noctua NH-D15 Air Cooler', 9990)">Добавить</button>
+<button>Добавить</button>
 </div>
 
 </div>
@@ -283,35 +278,6 @@ product.style.display="none"
 }
 
 </script>
-<div id="popup" class="popup">
-
-<div class="popup-box">
-
-<h2>Компонент добавлен</h2>
-
-<p>Деталь успешно добавлена в сборку ПК.</p>
-
-<button onclick="closePopup()">Закрыть</button>
-
-</div>
-
-</div>
-<div id="cartPopup" class="popup">
-  <div class="popup-box">
-    <h2>Сборка ПК</h2>
-
-```
-<div id="cartItems">
-  <!-- сюда будут добавляться компоненты -->
-</div>
-
-<h3>Общая цена: <span id="totalPrice">0</span> ₽</h3>
-
-<button onclick="closeCart()">Закрыть</button>
-```
-
-  </div>
-</div>
 
 </body>
 </html>
